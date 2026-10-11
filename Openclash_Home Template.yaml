@@ -1,7 +1,8 @@
 # ========================
-# Sub-Store 模板 OpenClash_Home：作为 mihomo 补丁合并进 all VPS_CT 生成的节点
-# 由 VM100 /etc/openclash/config/Home.yaml 转换，改动三处：删除 VPS provider；proxies 改为 +proxies；
+# Sub-Store 模板 OpenClash_Home（公开版，放 GitHub）：作为 mihomo 补丁合并进节点来源订阅生成的 proxies
+# 由 VM100 /etc/openclash/config/Home.yaml 转换：删除 VPS provider；proxies 改为 +proxies；
 #   nameserver-policy 的 +.sk9.pp.ua 写成 <+.sk9.pp.ua>
+# 敏感值（Dler 订阅链接、secret）不在本文件，由各自 Sub-Store 文件的第二个脚本操作（私有补丁）覆盖
 # 合并规则：对象递归合并；数组整体替换；+key 前插；key+ 追加；key! 强制替换；
 #   键名本身以 + 开头或以 +/! 结尾时，用 <键名> 包起来转义（尖括号会被去掉）
 # ========================
@@ -12,7 +13,7 @@
 
 proxy-providers:
   Dler:
-    url: "https://oics.net/api/v3/download.getFile/7a06b244-b512-4f9e-8306-799ad89599e3?clash=smart&provider=clash.docx"
+    url: "https://replace.me/oix-subscription"   # 真实链接在 Sub-Store 私有补丁里
     type: http
     interval: 86400
     health-check:
@@ -82,7 +83,7 @@ external-controller: 0.0.0.0:9090
 # external-ui: ui
 # external-ui-name: zashboard
 # external-ui-url: https://gh-proxy.com/github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip
-secret: "123456"
+secret: ""   # 真实值在 Sub-Store 私有补丁里
 
 # ========================
 # DNS 设置
