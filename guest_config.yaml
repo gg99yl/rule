@@ -71,7 +71,7 @@ proxy-groups:
   - {name: 🚀 默认代理, type: select, proxies: [英国节点, 韩国节点, 狮城节点, 美国节点, 🌐 全部节点, DIRECT]}
   - {name: 📹 YouTube, type: select, proxies: [英国节点, 韩国节点, 狮城节点, 美国节点, 🌐 全部节点, DIRECT]}
   - {name: 👨🏿‍💻 GitHub, type: select, proxies: [英国节点, 韩国节点, 狮城节点, 美国节点, 🌐 全部节点, DIRECT]}
-  - {name: 🍀 Google, type: select, proxies: [[英国节点, 韩国节点, 狮城节点, 美国节点, 🌐 全部节点, DIRECT]}
+  - {name: 🍀 Google, type: select, proxies: [英国节点, 韩国节点, 狮城节点, 美国节点, 🌐 全部节点, DIRECT]}
   - {name: 🤖 AI, type: select, proxies: [英国节点, 韩国节点, 狮城节点, 美国节点, 🌐 全部节点, DIRECT]}
   - {name: 🎥 NETFLIX, type: select, proxies: [英国节点, 韩国节点, 狮城节点, 美国节点, 🌐 全部节点, DIRECT]}
   - {name: 💶 Wallet, type: select, proxies: [英国节点, 韩国节点, 狮城节点, 美国节点, 🌐 全部节点, DIRECT]}
