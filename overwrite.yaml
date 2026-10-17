@@ -78,7 +78,7 @@ proxy-groups:
   - {name: AI节点, type: select, include-all: true, filter: "(?=.*(AI))^((?!(台|日|韩|新|深|美)).)*$"}
   - {name: 🇺🇲 美国节点, type: select, include-all: true, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|韩|新|日)).)*$"}
   - {name: 🔯 香港故转, type: fallback, include-all: true, interval: 300, filter: "(?=.*(AI))^((?!(台|日|韩|新|深|美)).)*$"}
-  - {name: AI故转, type: fallback, include-all: true, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
+  - {name: AI故转, type: fallback, include-all: true, interval: 300, filter: "(?=.*(AI))^((?!(台|日|韩|新|深|美)).)*$"}
   - {name: 🔯 美国故转, type: fallback, include-all: true, interval: 300, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|韩|新|日)).)*$"}
   - {name: ♻️ 香港自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
   - {name: AI自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(AI))^((?!(台|日|韩|新|深|美)).)*$"}
