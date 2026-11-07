@@ -479,7 +479,7 @@ rules:
   - DOMAIN-KEYWORD,epdg,英国-故转
   - DOMAIN-SUFFIX,wifi.ee.co.uk,英国-故转    
   - DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com, 英国-故转    
-  - DOMAIN-SUFFIX,vm.gg99usayl.top, 直连     
+  #- DOMAIN-SUFFIX,vm.gg99usayl.top, 直连     
   - RULE-SET,F1TV / domain, 美国-故转     
   - DOMAIN,d2n9h2wits23hf.cloudfront.net, 美国-故转 
   - DOMAIN,f1prodlive.akamaized.net, 美国-故转 
