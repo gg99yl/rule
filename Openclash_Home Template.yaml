@@ -434,8 +434,8 @@ rules:
   - AND,((SRC-IP-CIDR,192.168.2.210/32),(NETWORK,UDP),(DST-PORT,123)),Windows Update
   # === end Windows Update block ===
   - SRC-IP-CIDR,192.168.2.210/32,VDI
-  - SRC-IP-CIDR,192.168.2.195/32,BBP iPad
-  - DOMAIN-SUFFIX,sk9.pp.ua,直连 
+  #- SRC-IP-CIDR,192.168.2.195/32,BBP iPad
+  - DOMAIN-SUFFIX,1.sk9.pp.ua,直连 
   - AND,((NETWORK,UDP),(OR,((DST-PORT,500),(DST-PORT,4500)))),英国-故转
   - AND,((RULE-SET,cn!_domain),(DST-PORT,443),(NETWORK,UDP)),REJECT
   - RULE-SET,private_ip,直连,no-resolve
