@@ -58,11 +58,19 @@ dns:
     - "+.lan"
     - "+.local"
     - "+.market.xiaomi.com"
-  default-nameserver:
+  respect-rules: true                # mihomo 自己发出的 DNS 查询也按 rules 分流：1.1.1.1/8.8.8.8 不在 cn_ip，会走 🐟 漏网之鱼(默认代理)
+  default-nameserver:                # 只用于解析下面 DoH 服务器自身的域名
     - 223.5.5.5
-  nameserver:
+  proxy-server-nameserver:           # 解析节点服务器域名；开启 respect-rules 时必须配置
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
+  nameserver-policy:                 # 国内/局域网域名仍用国内 DNS，保证拿到国内 CDN 地址
+    "rule-set:cn_domain,private_domain,microsoftcn_domain,applecn_domain,steamcn_domain":
+      - https://dns.alidns.com/dns-query
+      - https://doh.pub/dns-query
+  nameserver:                        # 其余域名（含 IP 规则触发的解析）用境外 DoH，经代理发出，避免泄漏给国内 DNS
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
  
 # 出站策略，根据自己情况调整每个策略里分组排序，增删都可以，比如把美国自动放到第一个，比如删除香港故转，注意别漏掉表情逗号等。
 # 如果相应分组没有筛选到对应的国家，请根据自己节点名字调整筛选关键字。
